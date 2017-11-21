@@ -29,13 +29,18 @@ public class Practicas {
 					cadenas[j] = aux;
 				}
 		
-		
 	}
 	
-	public void ordenaEstudiantes(Estudiante[] estudiantes)
-	{
-		
+	public void ordenaEstudiantes(Estudiante[] estudiantes){
+		for (int i = 0; i < estudiantes.length - 1; i++)
+			for (int j = i + 1; j < estudiantes.length; j++)
+				if (estudiantes[i].compareTo(estudiantes[j])>0) {
+					Estudiante aux = estudiantes[i];
+					estudiantes[i] = estudiantes[j];
+					estudiantes[j] = aux;
+			}
 	}
+			
 	public float calculaSaldo(float saldoInicial, float[] movimientos) {
 		float saldoFinal = saldoInicial;
 		for (int i = 0; i < movimientos.length; i++)

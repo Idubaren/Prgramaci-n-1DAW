@@ -28,4 +28,8 @@ public class Estudiante extends Persona {
 		this.codGrupo = codGrupo;
 	}
 
+	public int compareTo(Estudiante estudiante) {
+		return this.getNif().compareTo(estudiante.getNif());
+	}
+
 }
